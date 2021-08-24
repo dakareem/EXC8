@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meats</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>choose your meat type</h1> 
+    <div>
+    <select id="meats" onchange="doSomething()">
+
+<option>
+Red meat
+</option>
+
+<option>
+    diet meat
+</option>
+
+<option>
+sheep meat
+</option>
+
+<option>
+cattle meat
+</option>
+
+<option>
+veal meat
+</option>
+
+<option>
+otrich meal
+</option>
+    </select>
+</div>
+   <br><br>
+   <div>Quantity KG:<br><input type="text" id="kg"> </div><br><br>
+  <div><button onclick="calc()">calculate</button></div><br><br>
+   <div>Total Price :<br> <input type="text" id="totalprice"/></div>
+   
+  <script>
+    const meats = document.getElementById("meats").value;
+    let price = 0;
+
+    function doSomething() {
+        if (document.getElementById('meats').value == "red meat"){
+                 price = 49.90;
+    }
+    else if (document.getElementById('meats').value == "diet meat"){
+    price = 39.90;
+    }
+    else if (document.getElementById('meats').value == "sheep meat"){
+        price = 99.90;
+    }
+    else if (document.getElementById('meats').value == "cattle meat"){
+        price = 79.90;
+    }
+    else if (document.getElementById('meats').value == "veal meat"){
+        price = 55.90;
+    }
+    else if (document.getElementById('meats').value == "otrich meal"){
+        price : 29.90;
+    }
+}  
+let kg = document.getElementById('kg');
+function calc() { 
+    var kgNum = +kg.value;
+    console.log(kgNum);
+    var priceNum = +price;
+    console.log(priceNum);
+    const totalprice = kgNum*priceNum;
+    console.log(totalprice);
+    document.getElementById('totalprice').value=totalprice;
+
+}
+  </script>
+</body>
+</html>
