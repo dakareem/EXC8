@@ -1,1 +1,2 @@
-# calculate.exc.js
+# meat shop
+# calculate price by k.g
